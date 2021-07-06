@@ -19,7 +19,6 @@ public class JDBCUtils {
 		Properties properties = new Properties();
 		try {
 			InputStream is=JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties");
-			System.out.println(is);
 			properties.load(is);
 			ds=DruidDataSourceFactory.createDataSource(properties);
 		}  catch (FileNotFoundException e) {
