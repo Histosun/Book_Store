@@ -48,7 +48,7 @@ public abstract class BaseDao<T> {
 	
 	public int update(String sql,Object... params) {
 		try(Connection connection=JDBCUtils.getConnection()){
-			return queryRunner.update(null, sql, params);
+			return queryRunner.update(connection, sql, params);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -9,24 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.alibaba.druid.pool.vendor.SybaseExceptionSorter;
 import com.zhaoyang.bookstore.bean.User;
 import com.zhaoyang.bookstore.service.UserService;
 import com.zhaoyang.bookstore.service.impl.UserServiceImpl;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class RegistServlet
  */
-public class LoginServlet extends HttpServlet {
+public class RegistServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
 	private UserService us=new UserServiceImpl();
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doPost(request, response);
 	}
 
@@ -34,19 +31,16 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		User user=us.login(new User(null,request.getParameter("username"),request.getParameter("password"),null));
-		if(user==null) {
-			RequestDispatcher dispatcher= request.getRequestDispatcher("/pages/user/login.html");
-			dispatcher.forward(request, response);
-		} else {
+		String username=request.getParameter("username");
+		String password=request.getParameter("password");
+		String email=request.getParameter("email");
+		boolean regist=us.regist(new User(null, username, password, email));
+		if( regist ) {
 			response.sendRedirect(request.getContextPath()+"/pages/user/login_success.html");
+		} else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/user/regist.html");
+			dispatcher.forward(request, response);
 		}
-	}
-	
-	public static void main(String[] args){
-		LoginServlet loginServlet = new LoginServlet();
-		System.out.println( loginServlet.us.login(new User(null,"123123","123123",null)));
 	}
 
 }

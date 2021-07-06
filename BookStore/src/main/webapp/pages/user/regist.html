@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Sign Up</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+<base href="http://localhost:8080/BookStore/">
+<link type="text/css" rel="stylesheet" href="static/css/style.css" >
 <style type="text/css">
 	.login_form{
 		height:420px;
@@ -42,23 +43,25 @@
 				return false;
 			}
 			
-			var code=$("code").val();
+			alert("send regist request");
+			var code=$("#code").val();
 			if(code==null||code==""){
 				return false;
 			}
+			return true;
 		})
 	})
 </script>
 </head>
 <body>
 		<div id="login_header">
-			<img class="logo_img" alt="" src="../../static/img/logo.png" >
+			<img class="logo_img" alt="" src="static/img/logo.png" >
 		</div>
 		
 			<div class="login_banner">
 			
 				<div id="l_content">
-					<span class="login_word">Welcome to register</span>
+					<span class="login_word">Welcome</span>
 				</div>
 				
 				<div id="content">
@@ -69,7 +72,7 @@
 								<span class="errorMsg"></span>
 							</div>
 							<div class="form">
-								<form action="regist_success.html" method="post">
+								<form action="customer/RegistServlet" method="post">
 									<label>Username：</label>
 									<input class="itxt" type="text" placeholder="Please input username" autocomplete="off" tabindex="1" name="username" id="username" />
 									<br />
@@ -88,7 +91,7 @@
 									<br />
 									<label>Verify：</label>
 									<input class="itxt" type="text" style="width: 150px;" id="code"/>
-									<img alt="" src="../../static/img/code.bmp" style="float: right; margin-right: 40px">									
+									<img alt="" src="static/img/code.bmp" style="float: right; margin-right: 40px">									
 									<br />
 									<br />
 									<input type="submit" value="Register" id="sub_btn" />

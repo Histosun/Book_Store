@@ -1,15 +1,11 @@
 package com.zhaoyang.bookstore.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
-
 import javax.sql.DataSource;
-
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 
 public class JDBCUtils {
@@ -18,6 +14,7 @@ public class JDBCUtils {
 	static {
 		Properties properties = new Properties();
 		try {
+			
 			InputStream is=JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties");
 			properties.load(is);
 			ds=DruidDataSourceFactory.createDataSource(properties);
