@@ -2,7 +2,6 @@ package com.zhaoyang.bookstore.bean;
 
 import org.springframework.stereotype.Component;
 
-
 public class User {
 	private Integer id;
 	private String username;
