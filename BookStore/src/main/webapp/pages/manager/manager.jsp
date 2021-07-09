@@ -18,21 +18,14 @@
 	<div id="header">
 			<img class="logo_img" alt="" src="../../static/img/logo.png" >
 			<span class="wel_word">Backstage management system</span>
-			<div>
-				<a href="book_manager.html">Library management</a>|
-				<a href="order_manager.html">Order management</a>|
-				<a href="../../index.html">Return to store</a>
-			</div>
+			
+			<%@include file="/include/ManagerMenu.jsp" %>
 	</div>
 	
 	<div id="main">
 		<h1>Welcome the administrator to enter the background management system</h1>
 	</div>
 	
-	<div id="bottom">
-		<span>
-			尚硅谷书城.Copyright &copy;2015
-		</span>
-	</div>
+
 </body>
 </html>

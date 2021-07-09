@@ -13,12 +13,7 @@
 	<div id="header">
 			<img class="logo_img" alt="" src="static/img/logo.png" >
 			<span class="wel_word">Online Book Store</span>
-			<div>
-				<a href="pages/user/login.html">sign in</a> | 
-				<a href="pages/user/regist.html">sign up</a> &nbsp;&nbsp;
-				<a href="pages/cart/cart.html">cart</a>
-				<a href="pages/manager/manager.html">Backstage</a>
-			</div>
+			<%@include file="/include/NoLoginMenu.jsp" %>
 	</div>
 	<div id="main">
 		<div id="book">

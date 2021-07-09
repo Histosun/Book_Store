@@ -25,11 +25,8 @@
 		<div id="header">
 			<img class="logo_img" alt="" src="../../static/img/logo.png" >
 			<span class="wel_word">Edit</span>
-			<div>
-				<a href="book_manager.html">Library management</a>|
-				<a href="order_manager.html">Order management</a>|
-				<a href="../../index.html">Return to store</a>
-			</div>
+			
+			<%@include file="/include/ManagerMenu.jsp" %>
 		</div>
 		
 		<div id="main">

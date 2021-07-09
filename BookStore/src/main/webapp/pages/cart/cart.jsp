@@ -12,9 +12,9 @@
 	
 	<div id="header">
 			<img class="logo_img" alt="" src="static/img/logo.gif" >
-			<span class="wel_word">购物车</span>
+			<span class="wel_word">Cart</span>
 			<div>
-				<span>欢迎<span class="um_span">韩总</span>光临尚硅谷书城</span>
+				<span>Welcome<span class="um_span">韩总</span>光临尚硅谷书城</span>
 				<a href="pages/order/order.html">我的订单</a>
 				<a href="index.html">注销</a>&nbsp;&nbsp;
 				<a href="index.html">返回</a>

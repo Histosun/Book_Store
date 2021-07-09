@@ -21,12 +21,7 @@
 		<div id="header">
 				<img class="logo_img" alt="" src="../../static/img/logo.png" >
 				<span class="wel_word"></span>
-				<div>
-					<span>Welcome<span class="um_span">Zhaoyang</span></span>
-					<a href="../order/order.html">My order</a>
-					<a href="../../index.html">Log out</a>&nbsp;&nbsp;
-					<a href="../../index.html">return</a>
-				</div>
+				<%@include file="/include/LoginMenu.jsp" %>
 		</div>
 		
 		<div id="main">
