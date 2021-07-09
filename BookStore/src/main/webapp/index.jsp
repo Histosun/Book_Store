@@ -5,20 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Book store home</title>
-<link type="text/css" rel="stylesheet" href="static/css/style.css" >
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<%@include file="/include/ImportSource.jsp" %>
 </head>
 <body>
 	
 	<div id="header">
 			<img class="logo_img" alt="" src="static/img/logo.png" >
 			<span class="wel_word">Online Book Store</span>
-			<div>
-				<a href="pages/user/login.html">sign in</a> | 
-				<a href="pages/user/regist.html">sign up</a> &nbsp;&nbsp;
-				<a href="pages/cart/cart.html">cart</a>
-				<a href="pages/manager/manager.html">Backstage</a>
-			</div>
+			<%@include file="/include/NoLoginMenu.jsp" %>
 	</div>
 	<div id="main">
 		<div id="book">

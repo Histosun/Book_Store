@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>结算页面</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+<%@include file="/include/ImportSource.jsp" %>
 <style type="text/css">
 	h1 {
 		text-align: center;
@@ -16,7 +16,7 @@
 <body>
 	
 	<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
+			<img class="logo_img" alt="" src="static/img/logo.gif" >
 			<span class="wel_word">结算</span>
 			<div>
 				<span>欢迎<span class="um_span">韩总</span>光临尚硅谷书城</span>

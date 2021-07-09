@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Log in</title>
-<base href="http://localhost:8080/BookStore/">
-<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+<%@include file="/include/ImportSource.jsp" %>
 </head>
 <body>
 		<div id="login_header">
