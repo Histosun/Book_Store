@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Sign Up</title>
 <base href="http://localhost:8080/BookStore/">
-<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+<%@include file="/include/ImportSource.jsp" %>
 <style type="text/css">
 	.login_form{
 		height:420px;

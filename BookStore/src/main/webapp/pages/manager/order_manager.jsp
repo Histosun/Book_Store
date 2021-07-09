@@ -5,12 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Order management</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+<%@include file="/include/ImportSource.jsp" %>
 </head>
 <body>
 	
 	<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/logo.png" >
+			<img class="logo_img" alt="" src="static/img/logo.png" >
 			<span class="wel_word">Order management system</span>
 			
 			<%@include file="/include/ManagerMenu.jsp" %>

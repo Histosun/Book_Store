@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>购物车</title>
-<base href="http://localhost:8080/BookStore02/">
-<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+<%@include file="/include/ImportSource.jsp" %>
 </head>
 <body>
 	

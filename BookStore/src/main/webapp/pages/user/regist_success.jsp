@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Registration success!</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+<%@include file="/include/ImportSource.jsp" %>
 <style type="text/css">
 	h1 {
 		text-align: center;
@@ -19,7 +19,7 @@
 </head>
 <body>
 		<div id="header">
-				<img class="logo_img" alt="" src="../../static/img/logo.png" >
+				<img class="logo_img" alt="" src="static/img/logo.png" >
 				<span class="wel_word"></span>
 				<%@include file="/include/LoginMenu.jsp" %>
 		</div>

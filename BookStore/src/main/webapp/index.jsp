@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Book store home</title>
-<link type="text/css" rel="stylesheet" href="static/css/style.css" >
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<%@include file="/include/ImportSource.jsp" %>
 </head>
 <body>
 	
