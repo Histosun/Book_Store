@@ -79,7 +79,8 @@
 								</span>
 							</div>
 							<div class="form">
-								<form action="customer/RegistServlet" method="post">
+								<form action="customer/UserServlet" method="post">
+									<input type="hidden" name="method" value="regist"/>
 									<label>Username：</label>
 									<input class="itxt" type="text" placeholder="Please input username" autocomplete="off" tabindex="1" name="username" id="username" 
 										value="<%=username==null?"":username %>" />

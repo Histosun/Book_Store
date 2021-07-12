@@ -39,7 +39,8 @@
 									
 							</div>
 							<div class="form">
-								<form action="customer/LoginServlet" method="post">
+								<form action="customer/UserServlet" method="post">
+									<input type="hidden" name="method" value="login"/>
 									<label>Username:</label>
 									<input class="itxt" type="text" placeholder="username" autocomplete="off" tabindex="1" name="username"
 										value= "<%=username==null?"":username %>" />
