@@ -44,8 +44,6 @@
 				$(".errorMsg").text("Illegal email");
 				return false;
 			}
-			
-			alert("send regist request");
 			var code=$("#code").val();
 			if(code==null||code==""){
 				return false;
@@ -71,12 +69,20 @@
 						<div class="login_box">
 							<div class="tit">
 								<h1>Register</h1>
-								<span class="errorMsg"></span>
+								<span class="errorMsg">
+									<%
+										Object errorMsg=request.getAttribute("registMsg");
+										Object username=request.getParameter("username");
+										Object email=request.getParameter("email");
+									%>
+									<%=errorMsg==null?"":errorMsg %>
+								</span>
 							</div>
 							<div class="form">
 								<form action="customer/RegistServlet" method="post">
 									<label>Username：</label>
-									<input class="itxt" type="text" placeholder="Please input username" autocomplete="off" tabindex="1" name="username" id="username" />
+									<input class="itxt" type="text" placeholder="Please input username" autocomplete="off" tabindex="1" name="username" id="username" 
+										value="<%=username==null?"":username %>" />
 									<br />
 									<br />
 									<label>Password：</label>
@@ -88,7 +94,8 @@
 									<br />
 									<br />
 									<label>Email：</label>
-									<input class="itxt" type="text" placeholder="Please input email address" autocomplete="off" tabindex="1" name="email" id="email" />
+									<input class="itxt" type="text" placeholder="Please input email address" autocomplete="off" tabindex="1" name="email" id="email" 
+											value="<%=email==null?"":email %>" />
 									<br />
 									<br />
 									<label>Verify：</label>

@@ -27,12 +27,22 @@
 							</div>
 							<div class="msg_cont">
 								<b></b>
-								<span class="errorMsg">Input your username and password</span>
+								<span class="errorMsg">
+									<%
+										String errMsg=(String)request.getAttribute("loginMsg");
+										String username=(String)request.getParameter("username");
+										if(errMsg==null){
+											errMsg="Please input username and password";
+										}
+									%>
+									<%=errMsg %>
+									
 							</div>
 							<div class="form">
 								<form action="customer/LoginServlet" method="post">
 									<label>Username:</label>
-									<input class="itxt" type="text" placeholder="username" autocomplete="off" tabindex="1" name="username" />
+									<input class="itxt" type="text" placeholder="username" autocomplete="off" tabindex="1" name="username"
+										value= "<%=username==null?"":username %>" />
 									<br />
 									<br />
 									<label>Password：</label>

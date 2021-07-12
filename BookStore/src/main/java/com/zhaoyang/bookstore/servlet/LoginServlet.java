@@ -37,10 +37,11 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		User user=us.login(new User(null,request.getParameter("username"),request.getParameter("password"),null));
 		if(user==null) {
-			RequestDispatcher dispatcher= request.getRequestDispatcher("/pages/user/login.html");
+			request.setAttribute("loginMsg","Username/Password is wrong");
+			RequestDispatcher dispatcher= request.getRequestDispatcher("/pages/user/login.jsp");
 			dispatcher.forward(request, response);
 		} else {
-			response.sendRedirect(request.getContextPath()+"/pages/user/login_success.html");
+			response.sendRedirect(request.getContextPath()+"/pages/user/login_success.jsp");
 		}
 	}
 	

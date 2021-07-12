@@ -36,9 +36,10 @@ public class RegistServlet extends HttpServlet {
 		String email=request.getParameter("email");
 		boolean regist=us.regist(new User(null, username, password, email));
 		if( regist ) {
-			response.sendRedirect(request.getContextPath()+"/pages/user/login_success.html");
+			response.sendRedirect(request.getContextPath()+"/pages/user/login_success.jsp");
 		} else {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/user/regist.html");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/user/regist.jsp");
+			request.setAttribute("registMsg","username already exist");
 			dispatcher.forward(request, response);
 		}
 	}
