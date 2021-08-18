@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,11 +27,11 @@
 			<img class="logo_img" alt="" src="static/img/logo.png" >
 			<span class="wel_word">Edit</span>
 			
-			<%@include file="/include/ManagerMenu.jsp" %>
 		</div>
 		
 		<div id="main">
-			<form action="book_manager.html">
+			<form action="customer/BookServlet">
+				<input name="method" type="hidden" value="add"/>
 				<table>
 					<tr>
 						<td>Name</td>
@@ -41,11 +42,11 @@
 						<td colspan="2">Operating</td>
 					</tr>		
 					<tr>
-						<td><input name="book_name" type="text" value="时间简史"/></td>
-						<td><input name="book_price" type="text" value="30.00"/></td>
-						<td><input name="book_author" type="text" value="霍金"/></td>
-						<td><input name="book_sales" type="text" value="200"/></td>
-						<td><input name="book_stock" type="text" value="300"/></td>
+						<td><input name="title" type="text"/></td>
+						<td><input name="price" type="text"/></td>
+						<td><input name="author" type="text"/></td>
+						<td><input name="sales" type="text"/></td>
+						<td><input name="stock" type="text"/></td>
 						<td><input type="submit" value="submit"/></td>
 					</tr>	
 				</table>

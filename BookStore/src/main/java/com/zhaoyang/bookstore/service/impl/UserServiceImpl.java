@@ -1,12 +1,17 @@
 package com.zhaoyang.bookstore.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.zhaoyang.bookstore.bean.User;
 import com.zhaoyang.bookstore.dao.UserDao;
 import com.zhaoyang.bookstore.dao.impl.UserDaoImpl;
 import com.zhaoyang.bookstore.service.UserService;
 
+@Service
 public class UserServiceImpl implements UserService{
-	private UserDao ud=new UserDaoImpl();
+	@Autowired
+	private UserDao ud;
 
 	@Override
 	public User login(User user) {

@@ -1,9 +1,12 @@
 package com.zhaoyang.bookstore.dao.impl;
 
+import org.springframework.stereotype.Repository;
+
 import com.zhaoyang.bookstore.bean.User;
 import com.zhaoyang.bookstore.dao.BaseDao;
 import com.zhaoyang.bookstore.dao.UserDao;
 
+@Repository
 public class UserDaoImpl extends BaseDao<User> implements UserDao{
 	private String LOGIN_QUERY="SELECT * FROM cus_user WHERE username=? AND password=?";
 	private String REGISTER_UPDATE="INSERT INTO cus_user(username,password,email)values(?,?,?)";

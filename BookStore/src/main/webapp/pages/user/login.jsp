@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,14 +29,8 @@
 							<div class="msg_cont">
 								<b></b>
 								<span class="errorMsg">
-									<%
-										String errMsg=(String)request.getAttribute("loginMsg");
-										String username=(String)request.getParameter("username");
-										if(errMsg==null){
-											errMsg="Please input username and password";
-										}
-									%>
-									<%=errMsg %>
+									${loginMsg==null?"Please input username and password":loginMsg}
+								</span>
 									
 							</div>
 							<div class="form">
@@ -43,7 +38,7 @@
 									<input type="hidden" name="method" value="login"/>
 									<label>Username:</label>
 									<input class="itxt" type="text" placeholder="username" autocomplete="off" tabindex="1" name="username"
-										value= "<%=username==null?"":username %>" />
+										value= "${param.username}" />
 									<br />
 									<br />
 									<label>Password：</label>
